@@ -2,7 +2,7 @@ class ArticlesController < ApplicationController
 
   def index
     # Récupérer tous les articles de la base
-    @articles = Articles.all
+    @articles = Article.all
   end
 
 end
