@@ -1,8 +1,12 @@
-<table>
-	<% @chapters.each do |chapter| %>
-	<tr>
-		<td> <%= chapter.id %></td>
-		<td> <strong><%= chapter.title %> </strong></td>
-	</tr>
+<section class="chapters">
+  <% @chapters.each do |chapter| %>
+    <% if !chapter.parent_id %>
+    <div class="chapter-<%= chapter.id %>">
+      <h2><%= chapter.title %>, ID:<%= chapter.id %></h2>
+      <% chapter.children.each do |sub_chapter| %>
+        <h3><%= sub_chapter.title %>, ID: <%= sub_chapter.id %></h3>
+      <% end %>
+    </div>
+    <% end %>
 	<% end %>
-</table>
+</section>
