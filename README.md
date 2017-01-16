@@ -1,4 +1,4 @@
-# learn-rails
+# learning-rails
 
 This is a simple repo of what I learn at my school about [Rails](http://rubyonrails.org/).
 
