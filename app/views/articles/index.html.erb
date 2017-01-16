@@ -5,8 +5,8 @@
 	</tr>
 	<% @articles.each do |article| %>
 	<tr>
-		<td> <% @articles.id %> </td>
-		<td> <% @articles.content %> </td>
+		<td> <%= article.id %> </td>
+		<td> <%= article.content[0..255] %> </td>
 	</tr>
 	<% end %>
 </table>
