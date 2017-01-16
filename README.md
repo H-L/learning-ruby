@@ -1,24 +1,20 @@
-# README
+# learn-rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a simple repo of what I learn at my school about [Rails](http://rubyonrails.org/).
 
-Things you may want to cover:
+# Installation
 
-* Ruby version
+Make sure you have installed [Ruby](https://www.ruby-lang.org/fr/) and [RVM](https://rvm.io/).
 
-* System dependencies
+Then do the following commands :
 
-* Configuration
+``` bash
+git clone git@github.com:H-L/learning-ruby.git && cd learning-ruby
+bundle install
+./r.sh
+rails server
+```
 
-* Database creation
+`./r.sh` is a simple bash command to reset rails DB migration and relaunch seeds to the DB. Use it if you are changing the `db/seeds.rb` file.
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+By default `rails server` is serving on `http://localhost:3000/`.
