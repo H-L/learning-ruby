@@ -1,0 +1,18 @@
+<h1><%= @chapter.title %></h1>
+
+  <% if !@chapter.parent_id %>
+  <h2>Sub-Chapters</h2>
+    <ul>
+      <% @chapter.children.each do |sub_chapter| %>
+        <li><%= link_to sub_chapter.title, chapter_path(Chapter.find(sub_chapter.id)) %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <% if @articles.where(:chapter_id => @chapter.id) %>
+    <ul>
+      <% @articles.where(:chapter_id => @chapter.id).each do |article| %>
+        <li><%= link_to article.content[0..30], article_path(article.id) %></li>
+      <% end %>
+    </ul>
+  <% end %>

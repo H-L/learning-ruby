@@ -5,4 +5,10 @@ class ChaptersController < ApplicationController
       @articles = Article.all
     end
 
+    def show
+      @chapters = Chapter.all
+      @chapter = Chapter.find(params[:id])
+      @articles = Article.all
+    end
+
 end
