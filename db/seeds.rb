@@ -30,7 +30,11 @@
     #Creation des Articles dans les Chapters
     10.times do |h|
       puts "    Creating Article #{h} in Main Chapter #{i}, Sub-Chapter #{j}"
-    chapter.articles.create({content: "Contenu de l'Article nº#{h} pour le grand chapitre #{i}, sous-chapitre #{j}"})
+      chapter.articles.create({
+        content: "Contenu de l'Article nº#{h} pour le grand chapitre #{i}, sous-chapitre #{j}",
+        published_at: Time.now,
+        chapter_id: j
+      })
     end
   end
 end

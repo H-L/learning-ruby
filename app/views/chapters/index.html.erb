@@ -1,11 +1,22 @@
 <section class="chapters">
+  <!-- Parent Chapter Loop -->
   <% @chapters.each do |chapter| %>
     <% if !chapter.parent_id %>
     <div class="chapter-<%= chapter.id %>">
       <h2><%= chapter.title %>, ID:<%= chapter.id %></h2>
+
+      <!-- Children Chapter Loop -->
       <% chapter.children.each do |sub_chapter| %>
         <h3><%= sub_chapter.title %>, ID: <%= sub_chapter.id %></h3>
+
+        <% @articles.where(:chapter_id => sub_chapter.id).each do |article| %>
+          <article>
+            <p><%= article.content[0..255] %></p>
+          </article>
+        <% end %>
+
       <% end %>
+
     </div>
     <% end %>
 	<% end %>
