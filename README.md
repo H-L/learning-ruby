@@ -1,5 +1,4 @@
 # learning-rails
-![](https://img.shields.io/badge/style-flat-green.svg?style=flat)
 
 This is a simple repo of what I learn at my school about [Rails](http://rubyonrails.org/).
 
