@@ -1,0 +1,9 @@
+<article>
+  <p><%= article.content[0..100]%></p>
+  <p>
+    <strong>Article: <%= article.title %></strong>
+    <em>Created at: <%= sexy_date article.created_at%>
+    (<%= distance_of_time_in_words_to_now(article.created_at, include_seconds: true) %>)
+    </em>
+  </p>
+</article>
